@@ -14,6 +14,7 @@ Communication Contract:
   to verify if they exist, this should return true if it does or false if it doesn't.
 
 3. UML Diagram:
+   Can be found in the directory as uml.PNG
 
 4.
 a) For which teammate did you implement “Microservice A”?
