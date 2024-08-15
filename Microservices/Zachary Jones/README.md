@@ -3,13 +3,19 @@ Communication Contract:
 Endpoints
 
 - Generate License Key
+  
   URL: /generate
+  
   Method: GET
+
   Description: Generates a new unique license key and stores it in a file.
 
 - Verify License Key
+  
   URL: /verify
+  
   Method: POST
+  
   Description: Verifies if a given license key is valid.
 
 1. Request Data (Generating a license key)
