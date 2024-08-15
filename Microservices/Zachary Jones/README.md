@@ -1,5 +1,17 @@
 Communication Contract:
 
+Endpoints
+
+Generate License Key
+URL: /generate
+Method: GET
+Description: Generates a new unique license key and stores it in a file.
+
+Verify License Key
+URL: /verify
+Method: POST
+Description: Verifies if a given license key is valid.
+
 1. Request Data (Generating a license key)
 - Make sure licensing_service.py is running by using "python licensing_service.py"
 - use the command "curl http://127.0.0.1:5000/generate" to generate a key
@@ -37,3 +49,12 @@ Whenever they have an issue with the microservice.
 
 g) Is there anything else your teammate needs to know? Anything you’re worried about? Any assumptions you’re making? Any other mitigations / backup plans you want to mention or want to discuss with your teammate?
 I'm worried that my teammate wants this microservice done in a specific way that is different from the one I made which means I either have to remake the microservice or he has to create a main program that utilizes my format, Both cases being not ideal.
+
+
+Code Improvements
+Refactored verify_license_key Method
+In the revised version, the verify_license_key method has been refactored for improved efficiency and readability. Previously, the method performed file reading and key verification in one step. Now, file reading has been separated into a private method _read_license_keys, which reads all license keys from the file. This change reduces complexity and improves performance.
+
+Improved Variable Naming
+Variable names have been updated for better clarity. For instance, key in the generate_license_key method has been renamed to new_license_key to better reflect its purpose.
+
